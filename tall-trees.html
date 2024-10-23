@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <titlel>Laliguras Nursery- Tall Trees</title>
+</head>
+<body>
+    <header>
+        <h1>Laliguras Nursery</h1>
+        <div class="search-container">
+        <input type="text" placeholder="Search..." id="search-input">
+        <button id="search-btn">🔍</button>
+       <script>
+    document.getElementById("search-btn").addEventListener("click", function() {
+        let query = document.getElementById("search-input").value.trim().toLowerCase();
+        let products = document.querySelectorAll(".product-item");
+        let found = false;
+
+        products.forEach(function(item) {
+            if (item.getAttribute("data-name").toLowerCase().includes(query)) {
+                item.style.display = "block"; // Show matching items
+                found = true;
+            } else {
+                item.style.display = "none"; // Hide non-matching items
+            }
+        });
+
+        // If no matching products are found, show a message
+        let noResultsMessage = document.getElementById("no-results");
+        if (!found) {
+            noResultsMessage.style.display = "block";
+        } else {
+            noResultsMessage.style.display = "none";
+        }
+    });
+
+    // Allow pressing "Enter" to trigger the search
+    document.getElementById("search-input").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            document.getElementById("search-btn").click();
+        }
+    });
+</script>
+
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="flowers.html">Flowers</a></li>
+                <li><a href="tall-trees.html">Tall Trees</a></li>
+                <li><a href="home-decoration.html">Home Decoration</a></li>
+                <li><a href="garden-preparation.html">Garden Preparation</a></li>
+                <li><a href="toandacc.html">Tools and accessories </a></li>
+                <li><a href="soandfer.html">Soil and fertilizers</a></li>
+                <li><a href="contactinfo.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="tall-trees">
+        <h2>Tall Trees</h2>
+        <p>Explore our collection of tall trees that are perfect for gardens, parks, and home landscapes:</p>
+        <div class="product-container">
+            <div class="product-item">
+                <img src="C:\Users\Acer\OneDrive\Desktop\codes\nursyry\nursery.png" alt="Maple Tree">
+                <p>Maple Tree</p>
+                <p>Big :Rs 200</p>
+                <p>Small:Rs 150</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree2.jpg" alt="Oak Tree">
+                <p>Oak Tree</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree3.jpg" alt="Pine Tree">
+                <p>Pine Tree</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tree4.jpg" alt="Cherry Blossom">
+                <p>Cherry Blossom</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Laliguras Nursery. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

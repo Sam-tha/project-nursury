@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <title>Laliguras Nursery- Flowers</title>
+</head>
+<body>
+    <header>
+        <h1>Laliguras Nursery</h1>
+       <div class="search-container">
+        <input type="text" placeholder="Search..." id="search-input">
+        <button id="search-btn">🔍</button>
+       <script>
+    document.getElementById("search-btn").addEventListener("click", function() {
+        let query = document.getElementById("search-input").value.trim().toLowerCase();
+        let products = document.querySelectorAll(".product-item");
+        let found = false;
+
+        products.forEach(function(item) {
+            if (item.getAttribute("data-name").toLowerCase().includes(query)) {
+                item.style.display = "block"; // Show matching items
+                found = true;
+            } else {
+                item.style.display = "none"; // Hide non-matching items
+            }
+        });
+
+        // If no matching products are found, show a message
+        let noResultsMessage = document.getElementById("no-results");
+        if (!found) {
+            noResultsMessage.style.display = "block";
+        } else {
+            noResultsMessage.style.display = "none";
+        }
+    });
+
+    // Allow pressing "Enter" to trigger the search
+    document.getElementById("search-input").addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            document.getElementById("search-btn").click();
+        }
+    });
+</script>
+
+        <nav>
+            <ul>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="flowers.html">Flowers</a></li>
+                <li><a href="tall-trees.html">Tall Trees</a></li>
+                <li><a href="home-decoration.html">Home Decoration</a></li>
+                <li><a href="garden-preparation.html">Garden Preparation</a></li>
+                <li><a href="toandacc.html">Tools and accessories </a></li>
+                <li><a href="soandfer.html">Soil and fertilizers</a></li>
+                <li><a href="contactinfo.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="flowers">
+        <h2>Flowers</h2>
+        <div class="product-container">
+            <div class="product-item">
+                <img src="C:\Users\Acer\OneDrive\Desktop\backimg.jpg" alt="Rose Plant">
+                <p>Rose Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+            <div class="product-item">
+                <img src="images/flower2.jpg" alt="Orchid Plant">
+                <p>Orchid Plant</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Laliguras Nursery. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
