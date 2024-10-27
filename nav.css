@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Modern, elegant font */
+    background-color: #f4f8f5;
+    /* Light background for clean look */
+    color: #333;
+    /* Darker text for better contrast */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.hero h2 {
+    font-size: 36px;
+    color: white;
+    /* Lighter green to welcome visitors */
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+.nav {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #2F4F4F;
+    /* Dark Slate Gray for modern elegance */
+    padding: 15px;
+    border-radius: 12px;
+    /* Smooth rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #66CDAA;
+    /* Soft Mint Green for buttons */
+    padding: 12px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Smooth transitions */
+}
+
+.nav a:hover {
+    background-color: #4CBB17;
+    /* Lighter Leaf Green on hover */
+    box-shadow: 0 4px 10px rgba(76, 187, 23, 0.2);
+    /* Slight shadow for hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+.nav i {
+    display: none;
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+/* Greeting Text */
+.nav p {
+    background-color: #E8F5E9;
+    /* Very light green for contrast */
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 8px;
+    margin-right: 20px;
+    display: none;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1041px) {
+    .nav a {
+        display: none;
+    }
+
+    .nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav i {
+        display: block;
+    }
+
+    .nav p {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+}
+
+/* Side Navigation */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #D6EFD8;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #FFD1DC;
+    /* Petal Pink hover effect */
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}

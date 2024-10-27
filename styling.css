@@ -1,464 +1,226 @@
-body, h1, h2, p {
-    font-family: Arial, sans-serif;
+/* Root Variables */
+:root {
+    --primary-bg-color: #f5f5f5;
+    --accent-color: #66FF66;
+    --hover-accent: #388E3C;
+    --text-dark: #333;
+    --text-light: #D6EFD8;
+    --dark-bg: #111;
+    --footer-bg: #333;
+    --font-main: Arial, sans-serif;
+    --font-alt: 'Courier New', Courier, monospace;
+}
+
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+nav ul li p,
+nav ul li i {
+    display: none !important;
+}
+
+body {
+    font-family: var(--font-main);
+}
+
+/* Header */
 header {
-    background-color: #66FF66;
+    background: var(--accent-color);
     color: white;
     text-align: center;
     padding: 1rem;
+    margin-bottom: 10px;
 }
 
+nav {
+    margin-top: 10px;
+}
+
+/* Navigation */
 nav ul {
-    list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    padding: 1rem 0;
-    background-color: #388E3C;
+    padding: 1rem 1rem;
+    background: var(--hover-accent);
+    align-items: center;
+    list-style: none;
+    border-radius: 10px;
+}
+
+nav ul li {
+    padding: 2px 2px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 
 nav a:hover {
     background-color: white;
-    color: #388E3C;
+    color: var(--hover-accent);
 }
 
-.hero {
+
+
+/* Content Containers */
+.container {
+    font-family: var(--font-alt);
     font-size: 24px;
-    font-family: 'Courier New', Courier, monospace;
-    opacity: 0; /* Start hidden */
-    transform: translateX(-100%); /* Start off-screen to the left */
-    animation: slide-in 2s ease forwards; /* Adjust duration as needed */
-    
-  }
-
-
-  /* Keyframes for sliding effect */
-  @keyframes slide-in {
-    to {
-      opacity: 1; /* Fade in */
-      transform: translateX(0); /* Slide into place */
-    }
-  }
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
 }
 
 .paragraph {
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 img {
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px; /* Space around the image */
-    display: inline-block; /* Ensures the image can float */
+    width: 150px;
+    height: auto;
+    margin: 10px;
 }
 
 .float-left {
-    float: left; /* Float image to the left */
+    float: left;
 }
 
 .float-right {
-    float: right; /* Float image to the right */
+    float: right;
 }
 
-/* Clear floats after the paragraphs */
-.paragraph::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-  
-  .container {
-    font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
-    opacity: 0; /* Start hidden */
-    transform: translateX(-100%); /* Start off-screen to the left */
-    animation: slide-in 2s ease forwards; /* Adjust duration as needed */
-  }
-  
-  /* Keyframes for sliding effect */
-  @keyframes slide-in {
-    to {
-      opacity: 1; /* Fade in */
-      transform: translateX(0); /* Slide into place */
-    }
-  }
-
-  
-section {
-    padding: 2rem;
-}
-
-.product-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.product-item {
-    text-align: center;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-.header {
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-    padding: 40px 0;
-}
-
-.logo h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.banner h2 {
-    font-size: 24px;
-    margin: 10px 0 0;
-    padding: 10px;
-}
-
-.our-collection {
-    text-align: center;
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.our-collection h2 {
-    font-size: 28px;
-}
-
-.collection-items {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.item {
-    text-align: center;
-}
-
-.item img {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.why-choose-us {
-    background-color: #eef7ee;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.why-choose-us h2 {
-    font-size: 28px;
-}
-
-.features {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.feature {
-    width: 200px;
-    text-align: center;
-}
-
-.feature img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.visit-us {
-    background-color: #fff;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.visit-us h2 {
-    font-size: 28px;
-}
-
-.visit-us p {
-    margin: 20px 0;
-    font-size: 18px;
-}
-
-.visit-us button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+/* Product, Collection, Features */
+.product-container,
+.collection-items,
+.features,
+.contact-info,
+.visit-us,
+.why-choose-us,
 .stay-connected {
-    background-color: #eef7ee;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.stay-connected h2 {
-    font-size: 28px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-
-
-
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-
-.product-item img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-}
-
-/* Existing CSS from previous example */
-
-.contact-info {
-    background-color: #f1f1f1;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.contact-info p {
-    font-size: 1.1rem;
-}
-
-.service-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
 }
 
-.service-item {
-    background-color: #e9f5e9;
+.item,
+.product-item,
+.feature {
+    background: var(--primary-bg-color);
     padding: 1rem;
     border-radius: 8px;
-    width: 30%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-item:hover {
+.item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Image Styling */
+img {
+    border-radius: 8px;
+}
+
+/* Form */
 form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: 0 auto;
-    padding: 1rem;
-    background-color: #f9f9f9;
+    background: #f9f9f9;
     border-radius: 8px;
+    padding: 1rem;
 }
 
-form input, form textarea, form button {
+input,
+textarea,
+button {
     margin-bottom: 1rem;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #388E3C;
-}
-/* Existing CSS styles */
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-around;
-}
-
-.product-item {
-    background-color: #f5f5f5;
-    padding: 1rem;
-    border-radius: 8px;
-    width: 20%;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .search-container {
-        width: 100%;
-        justify-content: space-between;
-        padding: 0.5rem;
-    }
-
-    #search-input {
-        width: 70%;
-    }
-}
-
-/* Container to hold the search bar and button */
-.search-container {
-    position: absolute;
-    top: 10px; /* Distance from the top */
-    right: 10px; /* Distance from the right */
-}
-
-/* Search input styling */
-.search-input {
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Search button styling */
-.search-button {
-    padding: 6px 10px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 5px;
-}
-
-.search-button:hover {
-    background-color: #45a049;
-}
-}
-
-/* Flex container */
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-/* Styling for the text section */
-.text-container {
-    flex: 3; /* Take more space */
-    padding-right: 10px;
-}
-
-.chat-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+button {
+    background: var(--hover-accent);
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: var(--hover-accent);
+}
+
+
+
+/* Side Navigation */
+.sidenav {
+    height: 100%;
+    width: 0;
     position: fixed;
-    bottom: 20px; /* Adjust the distance from the bottom */
-    z-index: 1000; /* Ensures the buttons stay on top */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.chat-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #D6EFD8;
+    display: block;
+    transition: 0.3s;
 }
 
-.messenger {
-    background-color: #0078FF;
-    right: 150px; /* Adjust spacing between the buttons */
+.sidenav a:hover {
+    color: #FFD1DC;
+    /* Petal Pink hover effect */
 }
 
-.messenger:hover {
-    background-color: #005bb5;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
 }
 
-.whatsapp {
-    background-color: #25D366;
-    right: 10px; /* Positions it closer to the right corner */
+/* Footer */
+footer {
+    background: var(--footer-bg);
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
-.whatsapp:hover {
-    background-color: #1eae57;
+
+@media only screen and (max-width: 1520px) {
+
+    nav ul li i,
+    nav ul li p {
+        display: flex !important;
+        font-size: 20px;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    nav ul li a {
+        display: none;
+    }
 }
