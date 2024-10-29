@@ -211,6 +211,19 @@ footer {
     padding: 1rem;
 }
 
+/* FLower.html flower div */
+.flower {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.flower-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
 
 @media only screen and (max-width: 1130px) {
 

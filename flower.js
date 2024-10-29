@@ -12,150 +12,6 @@ const flowers = [
     price1: "",
     price2: "",
   },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
-  {
-    name: "",
-    pic: "",
-    price1: "",
-    price2: "",
-  },
 ];
 
 // Get the container where flowers will be displayed
@@ -163,8 +19,12 @@ const flowerContainer = document.getElementById("flower-container");
 
 // Generate HTML for each flower and append it to the container
 flowers.forEach((flower) => {
+  if (flower.name === "") {
+    return; // Skip iteration if name is empty
+  }
+
   const flowerDiv = document.createElement("div");
-  flowerDiv.classList.add("product-item"); // optional styling class
+  flowerDiv.classList.add("flower-item"); // optional styling class
 
   // Add flower details to the div
   flowerDiv.innerHTML = `
@@ -173,7 +33,7 @@ flowers.forEach((flower) => {
         <p> ${flower.price1}</p>
     `;
   if (flower.price2 != "") {
-    flowerDiv.innerHTML += `<p>${flower.price2}<p>`;
+    flowerDiv.innerHTML += `<p>${flower.price2}</p>`;
   }
 
   flowerContainer.appendChild(flowerDiv);
