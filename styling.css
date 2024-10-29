@@ -95,7 +95,11 @@ img {
 }
 
 /* Product, Collection, Features */
-.product-container,
+.product-container {
+    display: flex;
+    justify-content: center;
+}
+
 .collection-items,
 .features,
 .contact-info,
@@ -208,7 +212,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 1520px) {
+@media only screen and (max-width: 1130px) {
 
     nav ul li i,
     nav ul li p {
