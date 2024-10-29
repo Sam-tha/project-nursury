@@ -1,15 +1,12 @@
 const flowers = [
-  { name: "Aralia",
-   pic: "/assets/1.jpg",
-   price1: "Rs 250", 
-   price2: "" },
+  { name: "Aralia", pic: "/assets/1.jpg", price1: "Rs 250", price2: "" },
   {
     name: "Table Kamini",
     pic: "/assets/2.jpg",
     price1: "Small: Rs 250",
     price2: "Big: Rs 450",
   },
- 
+
   {
     name: "Hibisucs",
     pic: "/assets/3.jpg",
@@ -173,7 +170,7 @@ flowers.forEach((flower) => {
 
   const flowerDiv = document.createElement("div");
   flowerDiv.classList.add("flower-item"); // optional styling class
-
+  flowerDiv.setAttribute("flwr-name", flower.name);
   // Add flower details to the div
   flowerDiv.innerHTML = `
         <img src='${flower.pic}'></img>

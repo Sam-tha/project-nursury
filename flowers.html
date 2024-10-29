@@ -19,11 +19,11 @@
             <script>
                 document.getElementById("search-btn").addEventListener("click", function () {
                     let query = document.getElementById("search-input").value.trim().toLowerCase();
-                    let products = document.querySelectorAll(".product-item");
+                    let products = document.querySelectorAll(".flower-item");
                     let found = false;
 
                     products.forEach(function (item) {
-                        if (item.getAttribute("data-name").toLowerCase().includes(query)) {
+                        if (item.getAttribute("flwr-name").toLowerCase().includes(query)) {
                             item.style.display = "block"; // Show matching items
                             found = true;
                         } else {
@@ -352,17 +352,17 @@
             </b>
 
         </div> -->
-        <section class="flower">
-            <div id="flower-container" class="flower-container">
-                <div id="no-results" style="display:none;">No matching products found.</div>
-            </div>
-        </section>
 
-        <footer>
-            <p>&copy; 2024 Laliguras Nursery. All Rights Reserved.</p>
-        </footer>
-        <script src="flower.js"></script>
-        <script src="script.js"></script>
+        <div id="flower-container" class="flower-container">
+            <div id="no-results" style="display:none;">No matching products found.</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Laliguras Nursery. All Rights Reserved.</p>
+    </footer>
+    <script src="flower.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
