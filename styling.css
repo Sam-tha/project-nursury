@@ -9,6 +9,8 @@
     --footer-bg: #333;
     --font-main: Arial, sans-serif;
     --font-alt: 'Courier New', Courier, monospace;
+    --fade-blue: #e6f7ff;
+    --fade-red: #f9e6e6;
 }
 
 /* Global Styles */
@@ -80,19 +82,8 @@ nav a:hover {
     text-align: justify;
 }
 
-img {
-    width: 150px;
-    height: auto;
-    margin: 10px;
-}
 
-.float-left {
-    float: left;
-}
 
-.float-right {
-    float: right;
-}
 
 /* Product, Collection, Features */
 .product-container {
@@ -124,45 +115,9 @@ img {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
 
-/* Image Styling */
-img {
-    border-radius: 8px;
-}
 
-/* Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    background: #f9f9f9;
-    border-radius: 8px;
-    padding: 1rem;
-}
 
-input,
-textarea,
-button {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background: var(--hover-accent);
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background: var(--hover-accent);
-}
 
 
 
@@ -222,7 +177,103 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    
+    margin: 10px;
+}
+
+.flower-item img {
+    border: 10px solid var(--fade-blue);
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.flower-item {
+    background-color: var(--fade-red);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Main container styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 8px 15px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Light shadow for a clean effect */
+    background-color: #f8f9fa;
+    /* Soft background color */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input styling */
+#search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+    transition: color 0.3s ease;
+}
+
+/* Button styling */
+#search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+    color: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button hover and active states */
+#search-btn:hover {
+    background-color: #e9f5ff;
+    color: #0056b3;
+}
+
+#search-btn:active {
+    background-color: #d0ebff;
+}
+
+/* Icon styling */
+#search-btn i {
+    font-size: 18px;
+}
+
+/* Focus effect on container */
+.search-container:focus-within {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Slightly deeper shadow on focus */
+    background-color: #ffffff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .search-container {
+        max-width: 90%;
+        padding: 8px 12px;
+    }
+
+    #search-input {
+        font-size: 14px;
+    }
+
+    #search-btn {
+        width: 32px;
+        height: 32px;
+    }
 }
 
 @media only screen and (max-width: 1130px) {

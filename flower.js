@@ -170,11 +170,11 @@ flowers.forEach((flower) => {
 
   const flowerDiv = document.createElement("div");
   flowerDiv.classList.add("flower-item"); // optional styling class
-  flowerDiv.setAttribute("flwr-name", flower.name);
+  flowerDiv.setAttribute("data-flwr-name", flower.name);
   // Add flower details to the div
   flowerDiv.innerHTML = `
         <img src='${flower.pic}'></img>
-        <p><strong>Name:</strong> ${flower.name}</p>
+        <p><strong> ${flower.name}</strong></p>
         <p> ${flower.price1}</p>
     `;
   if (flower.price2 != "") {
