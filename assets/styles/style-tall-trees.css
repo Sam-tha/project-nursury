@@ -1,0 +1,49 @@
+:root {
+    --fade-blue: #e6f7ff;
+    --fade-red: #f9e6e6;
+}
+
+.trees {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.msg {
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tree-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 10px;
+}
+
+.tree-item {
+    text-align: center;
+    background-color: var(--fade-red);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.tree-item img {
+    border: 10px solid var(--fade-blue);
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+@media (max-width: 480px) {
+    .tree-item img {
+        width: calc(100% - 1rem);
+    }
+
+    .tree-item {
+        width: calc(50% - 1rem);
+        padding: 5px;
+    }
+}

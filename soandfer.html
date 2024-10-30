@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="/assets/styles/style-soil.css">
     <script src="https://kit.fontawesome.com/35d46b7aa8.js" crossorigin="anonymous"></script>
 
     <title>Laliguras Nursery -Soil and fertilizers</title>
@@ -21,7 +22,7 @@
         <nav>
             <ul>
                 <li class="greeting">
-                    <p>Good Evening</p>
+                    <p id="greet">Good Evening</p>
                 </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="flowers.html">Flowers</a></li>
@@ -48,126 +49,11 @@
         <a href="soandfer.html">Soil and fertilizers</a>
         <a href="contactinfo.html">Contact</a>
     </div>
-    <section id="tall-trees">
+    <section id="soils">
         <h2>Soil and fertilizers</h2>
         <p>Explore our collection of fertilizers that are perfect for your plants</p>
-        <div class="product-container">
-            <div class="product-item">
-                <img src="images/tree1.jpg" alt="Maple Tree">
-                <p>Maple Tree</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree2.jpg" alt="Oak Tree">
-                <p>Oak Tree</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree3.jpg" alt="Pine Tree">
-                <p>Pine Tree</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-
-            </div>
+        <div class="soil-container" id="soil-container">
+            <div id="no-results" style="display:none;" class="no-match">No matching products found.</div>
         </div>
     </section>
 
@@ -175,13 +61,13 @@
         <p>&copy; 2024 Laliguras Nursery. All Rights Reserved.</p>
     </footer>
     <script>
-        document.getElementById("search-btn").addEventListener("click", function () {
+        document.getElementById("search-input").addEventListener("input", function () {
             let query = document.getElementById("search-input").value.trim().toLowerCase();
-            let products = document.querySelectorAll(".product-item");
+            let products = document.querySelectorAll(".soil-item");
             let found = false;
 
             products.forEach(function (item) {
-                if (item.getAttribute("data-name").toLowerCase().includes(query)) {
+                if (item.dataset.soilName.toLowerCase().includes(query)) {
                     item.style.display = "block"; // Show matching items
                     found = true;
                 } else {
@@ -189,23 +75,14 @@
                 }
             });
 
-            // If no matching products are found, show a message
+            // Display the "no results" message if nothing matches
             let noResultsMessage = document.getElementById("no-results");
-            if (!found) {
-                noResultsMessage.style.display = "block";
-            } else {
-                noResultsMessage.style.display = "none";
-            }
-        });
-
-        // Allow pressing "Enter" to trigger the search
-        document.getElementById("search-input").addEventListener("keypress", function (e) {
-            if (e.key === "Enter") {
-                document.getElementById("search-btn").click();
-            }
+            noResultsMessage.style.display = found ? "none" : "block";
         });
     </script>
-    <script src="script.js"></script>
+    <script src="assets/scripts/script.js"></script>
+
+    <script src="/assets/scripts/soil_fertilizer.js"></script>
 </body>
 
 </html>

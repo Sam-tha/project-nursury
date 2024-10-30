@@ -185,7 +185,7 @@ footer {
     width: 150px;
     height: auto;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .flower-item {
@@ -273,6 +273,15 @@ footer {
     #search-btn {
         width: 32px;
         height: 32px;
+    }
+
+    .flower-item img {
+        width: calc(100% - 1rem);
+    }
+
+    .flower-item {
+        width: calc(50% - 1rem);
+        padding: 5px;
     }
 }
 

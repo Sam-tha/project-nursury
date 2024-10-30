@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="/assets/styles/style-tall-trees.css">
     <script src="https://kit.fontawesome.com/35d46b7aa8.js" crossorigin="anonymous"></script>
 
     <title>Laliguras Nursery- Tall Trees</title>
@@ -20,7 +21,7 @@
         <nav>
             <ul>
                 <li class="greeting">
-                    <p>Good Evening</p>
+                    <p id="greet"></p>
                 </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="flowers.html">Flowers</a></li>
@@ -47,145 +48,25 @@
         <a href="soandfer.html">Soil and fertilizers</a>
         <a href="contactinfo.html">Contact</a>
     </div>
-    <section id="tall-trees">
-        <h2>Tall Trees</h2>
-        <p>Explore our collection of tall trees that are perfect for gardens, parks, and home landscapes:</p>
-        <div class="product-container">
-            <div class="product-item">
-                <img src="C:\Users\Acer\OneDrive\Desktop\codes\nursyry\nursery.png" alt="Maple Tree">
-                <p>Maple Tree</p>
-                <p>Big :Rs 200</p>
-                <p>Small:Rs 150</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree2.jpg" alt="Oak Tree">
-                <p>Oak Tree</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree3.jpg" alt="Pine Tree">
-                <p>Pine Tree</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-            <div class="product-item">
-                <img src="images/tree4.jpg" alt="Cherry Blossom">
-                <p>Cherry Blossom</p>
-            </div>
-
-
+    <section class="trees">
+        <p class="msg">Explore our collection of tall trees that are perfect for gardens, parks, and home landscapes:
+        </p>
+        <div class="tree-container" id="tree-container">
+            <div id="no-results" style="display:none;" class="no-match">No matching products found.</div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Laliguras Nursery. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
     <script>
-        document.getElementById("search-btn").addEventListener("click", function () {
+        document.getElementById("search-input").addEventListener("input", function () {
             let query = document.getElementById("search-input").value.trim().toLowerCase();
-            let products = document.querySelectorAll(".product-item");
+            let products = document.querySelectorAll(".tree-item");
             let found = false;
 
             products.forEach(function (item) {
-                if (item.getAttribute("data-name").toLowerCase().includes(query)) {
+                if (item.dataset.treeName.toLowerCase().includes(query)) {
                     item.style.display = "block"; // Show matching items
                     found = true;
                 } else {
@@ -193,22 +74,13 @@
                 }
             });
 
-            // If no matching products are found, show a message
+            // Display the "no results" message if nothing matches
             let noResultsMessage = document.getElementById("no-results");
-            if (!found) {
-                noResultsMessage.style.display = "block";
-            } else {
-                noResultsMessage.style.display = "none";
-            }
-        });
-
-        // Allow pressing "Enter" to trigger the search
-        document.getElementById("search-input").addEventListener("keypress", function (e) {
-            if (e.key === "Enter") {
-                document.getElementById("search-btn").click();
-            }
+            noResultsMessage.style.display = found ? "none" : "block";
         });
     </script>
+    <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/tree.js"></script>
 </body>
 
 </html>
